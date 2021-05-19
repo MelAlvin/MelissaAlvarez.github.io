@@ -214,6 +214,9 @@
                                            <li class="li-center">A flashlight</li>
                                            <li class="li-center">Several short wires and jumper wires</li>
                                          </ul> 
+                                    <p class="mb-2 text-left">With these materials, we produced the circuit, shown both in this pop-up, and as the preview photo of this lab. We construct the lab and write a short Arduino script in order to measure the ligth gathered by the photoresistors.
+                                            In doing this, we have a baseline for the amount of light detected, and can begin to think about how to use this for the following labs.</p>
+
                                            <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
@@ -256,9 +259,15 @@
                                          <h2 class="text-secondary text-uppercase mb-0">Light Following Robot P.2</h2>
                                          <hr class="star-dark mb-5">
                                          <h3 class="mb-4">Description</h3>
-                                    <p class="mb-5">In this lab, we build upon the foundation from lab 1, where we built circuits to measure light. Now using those measurements, we 
-                                       enable the robot to move in the direction of greatest light using two DC Motors and logic from the Arduino. Below is a video showing the robot successfully demonstrating this.</p>
-                                            <hr>
+                                       <p class="mb-5">In this lab, we build upon the foundation from lab 1, where we built circuits to measure light. Now using those measurements, we 
+                                       enable the robot to move in the direction of greatest light using two DC Motors and logic from the Arduino. We first had to callibrate the motors, in order to properly write code to move the direction the robot would move in.This is shown in the video below:</p>
+                                           </hr>
+                                        </div>
+                                    </div>
+                                    </div>
+                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/v3pd9JNdRxs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <p class="mb-5">Using that, we can then combine code from the last lab and the previous step to code the robot to move in the direction of greatest light. Below is a video showing the robot successfully demonstrating this.</p>
+                                           </hr>
                                         </div>
                                     </div>
                                     </div>
@@ -302,10 +311,15 @@
                                        <div class="col-lg-8 mx-auto">
                                          <h2 class="text-secondary text-uppercase mb-0">Using the microphone and the ADC</h2>
                                          <hr class="star-dark mb-5">
-                                        <p class="mb-2 text-left">In this lab, we attempted to create a microphone circuit that would be able to efficently pick up noise. We attempted to include a 4 pole butterworth filter, 
-                                             however, issues with circuit copmonents left us unable to use them, as simulations and testing showed that they did not align with theoretical results. We were able to accurately pick up noise,
-                                             using the Arduino's ADC and the FFT program, producing a nice spectrogram for a given frequency, as shown below.</p>
+                                        <p class="mb-2 text-left">The main goals of this lab were to understand theory by using LTSpice to generate simulation data of a low pass filter, high pass filter, and 4-pole butterworth filter, which were plotted in MATLAB.
+                                            These graphs are shown below:</p>
+                                           
+                                            <img class="img-fluid rounded mb-5" src="assets/img/portfolio/theoretical_low_pass.jpg" alt="" />
+                                            <img class="img-fluid rounded mb-5" src="assets/img/portfolio/theoretical_high_pass.jpg" alt="" />
+                                            <img class="img-fluid rounded mb-5" src="assets/img/portfolio/theoretical_band_pass.jpg" alt="" />
                                                <hr>
+                                               <p class="mb-2 text-left">We then attempted to recreate those filters in circuitry; unfortunately, the data colected from these circuits did not align with the theoretical data at all, likely due to
+                                                issues with the quality of the parts issued. We were able to perform Fast Fourier Transform on a 500 Hz sound, using the microphone and the FFT library from Arduino. This spectrogram is shown below.</p>
                                             <img class="img-fluid rounded mb-5" src="assets/img/portfolio/500hzspec.jpg" alt="" />
                                            <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
